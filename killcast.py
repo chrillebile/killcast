@@ -115,6 +115,7 @@ def appkill():
 	print (G + '[1]' + C + ' YouTube' + W)
 	print (G + '[2]' + C + ' Netflix' + W)
 	#print (G + '[3]' + C + ' Google Play Music' + W)
+	print (G + '[4]' + C + ' Spotify' + W)
 	choice = input('\n' + R + '[>] ' + W)
 	if choice == '1':
 		print (G + '[+]' + C + ' Killing YouTube...')
@@ -131,6 +132,11 @@ def appkill():
 		url = 'http://{}:{}/apps/GoogleMusic'.format(ip, port)
 		r = requests.delete(url, headers=header)
 		print ('\n', end='')
+	elif choice == '4':
+			print (G + '[+]' + C + ' Killing Spotify...')
+			url = 'http://{}:{}/apps/Spotify'.format(ip, port)
+			r = requests.delete(url, headers=header)
+			print ('\n', end='')
 	print ('\n', end='')
 
 def core():
